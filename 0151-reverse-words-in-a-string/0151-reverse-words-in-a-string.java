@@ -5,7 +5,12 @@ class Solution {
 
         for (int i = a.length-1 ; i >= 0 ; i--)
         {
-            result = result + a[i] + " ";
+            result = result + a[i] ;
+
+            if (i!=0)
+            {
+                result = result + " ";
+            }
         }
 
         return result.trim();
