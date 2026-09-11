@@ -14,29 +14,37 @@ class Solution {
                 {
                     continue;
                 }
-                for (int k = j + 1 ; k < nums.length - 1 ; k ++)
-                {
-                    if (k > j + 1 && nums[k] == nums[k-1])
-                    {
-                        continue;
-                    }
 
-                    for (int l = k + 1 ; l < nums.length ; l ++)
+                int left = j + 1 ; 
+                int right = nums.length - 1;
+
+                while (left < right)
+                {
+                    long sum = (long) nums[i] + nums[j] + nums[left] + nums[right];
+
+                    if ( sum == target)
                     {
-                        if (l > k + 1 && nums[l] == nums[l-1])
-                        {
-                            continue;
-                        }
-                        long sum = (long) nums[i] + nums[j] + nums[k] + nums[l];
-                        if (sum == target)
-                        {
-                            result.add(Arrays.asList(
-                                nums[i],
-                                nums[j],
-                                nums[k],
-                                nums[l]
-                            ));
-                        }
+                        result.add(Arrays.asList(nums[i], nums[j], nums[left],nums[right]));
+                        left ++ ; 
+                        right --;
+                    
+
+                    while ( right > left && nums[left] == nums[left - 1])
+                    {
+                        left++;
+                    }
+                    while ( right > left && nums[right] == nums[right + 1])
+                    {
+                        right -- ;
+                    }
+                    }
+                    else if ( sum < target )
+                    {
+                        left ++;
+                    }
+                    else
+                    {
+                        right -- ;
                     }
                 }
             }
