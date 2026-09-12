@@ -7,6 +7,6 @@ class Solution {
             result = result + nums[i];
             minimum = Math.min(minimum,nums[i]);
         }
-        return result - (minimum * nums.length);
+        return result - minimum * nums.length;
     }
 }
