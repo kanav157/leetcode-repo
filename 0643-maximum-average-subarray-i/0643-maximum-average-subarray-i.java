@@ -6,7 +6,7 @@ class Solution {
         for (int j = 0 ; j < nums.length ; j++)
         {
             count = count + nums[j];
-            while (j - i + 1 > k)
+            if (j - i + 1 > k)
             {
                 count = count - nums[i];
                 i ++;
