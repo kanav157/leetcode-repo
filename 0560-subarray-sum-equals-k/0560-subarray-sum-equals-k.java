@@ -1,11 +1,10 @@
 class Solution {
     public int subarraySum(int[] nums, int k) {
         HashMap<Integer,Integer> result = new HashMap<>();
-        int count = 0;
-        int sum = 0;
         result.put(0,1);
-
-        for(int i = 0 ; i < nums.length ; i++)
+        int sum = 0;
+        int count = 0;
+        for (int i = 0 ; i < nums.length ; i++)
         {
             sum = sum + nums[i];
             if (result.containsKey(sum-k))
