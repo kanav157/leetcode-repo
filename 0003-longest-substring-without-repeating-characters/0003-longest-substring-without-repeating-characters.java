@@ -4,9 +4,9 @@ class Solution {
         HashSet<Character> result = new HashSet<>();
         int left = 0;
         int max = 0;
-        for (int i = 0 ; i < s.length() ; i++)
+        for (int i = 0 ; i<s.length();i++)
         {
-            while (result.contains(s.charAt(i)))
+            while(result.contains(s.charAt(i)))
             {
                 result.remove(s.charAt(left));
                 left++;
