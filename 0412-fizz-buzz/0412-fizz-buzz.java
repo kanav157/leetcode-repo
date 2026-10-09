@@ -18,7 +18,7 @@ class Solution {
             }
             else
             {
-                result.add(i + "");
+                result.add(String.valueOf(i));
             }
         }
         return result;
