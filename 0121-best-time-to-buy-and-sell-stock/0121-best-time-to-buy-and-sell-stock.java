@@ -4,7 +4,7 @@ class Solution {
         int max = 0;
         for (int right = 1 ; right < prices.length; right ++)
         {
-            if (prices[left] > prices[right])
+            if (prices[right] < prices[left])
             {
                 left = right;
 
