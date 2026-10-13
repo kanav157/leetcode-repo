@@ -1,13 +1,20 @@
 class Solution {
     public boolean isPalindrome(String s) {
+        int left = 0;
+        
         s = s.replaceAll("[^a-zA-Z0-9]","");
         s = s.toLowerCase();
-        String a = new StringBuilder(s).reverse().toString();
-        if ( a.equals(s))
+        int right = s.length()-1;
+        while(right > left)
         {
-            return true;
 
+            if (s.charAt(left) != s.charAt(right))
+            {
+                return false;
+            }
+            left++;
+            right--;
         }
-        return false;
+        return true;
     }
 }
