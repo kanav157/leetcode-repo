@@ -3,11 +3,11 @@ class Solution {
 
         long a = 0;
 
-        while (x != 0) {
+        while (x != 0)
+        {
             int d = x % 10;
             x = x / 10;
-
-            a = a * 10 + d;
+            a = a*10 + d;
         }
 
         if (a > 2147483647 || a < -2147483648) {
