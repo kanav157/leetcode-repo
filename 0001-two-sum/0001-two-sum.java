@@ -1,10 +1,10 @@
 class Solution {
     public int[] twoSum(int[] nums, int target) {
         HashMap<Integer,Integer> result = new HashMap<>();
+        int sum = 0;
         for (int i = 0 ; i < nums.length ; i++)
         {
             int need = target - nums[i];
-
             if (result.containsKey(need))
             {
                 return new int[]{result.get(need),i};
